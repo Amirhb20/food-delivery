@@ -9,6 +9,57 @@
     <link rel="stylesheet" href="styles/responsive.css" />
   </head>
   <body>
+    <!-- header -->
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <div class="nav-content">
+            <div class="nav-content__logo">
+              <img
+                src="./images/logo-header.png"
+                class="nav-content__img"
+                alt="header Logo"
+              />
+            </div>
+            <ul class="menu-list">
+              <li
+                data-section="homepage"
+                class="menu-list__item menu-list__item--active"
+              >
+                <a href="#" class="menu-list__item__link">Homepage</a>
+              </li>
+              <li data-section="menu" class="menu-list__item">
+                <a href="#" class="menu-list__item__link">Menu</a>
+              </li>
+              <li data-section="sale-off" class="menu-list__item">
+                <a href="#" class="menu-list__item__link">Sale off</a>
+              </li>
+              <li data-section="news" class="menu-list__item">
+                <a href="#" class="menu-list__item__link">News</a>
+              </li>
+              <li data-section="contact" class="menu-list__item">
+                <a href="#" class="menu-list__item__link">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="nav-btn">
+            <a
+              href="auth.html?form=signup"
+              class="nav-btn__link nav-btn__link--sign"
+              >Sign in</a
+            >
+            <a
+              href="auth.html?form=login"
+              class="nav-btn__link nav-btn__link--log"
+              >Log in</a
+            >
+          </div>
+          <div class="nav-toggle__icon">
+            <div class="nav-toggle__line"></div>
+          </div>
+        </nav>
+      </div>
+    </header>
     <script src="./scripts/app.js"></script>
   </body>
 </html>
