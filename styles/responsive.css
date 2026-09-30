@@ -1,0 +1,75 @@
+@media screen and (min-width: 1400px) {
+  .container {
+    width: 1250px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .nav-content__logo {
+    margin-right: 6rem;
+  }
+  .nav-list__item {
+    margin-right: 5rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .nav-content__logo {
+    margin-right: 6rem;
+  }
+  .nav-list__item {
+    margin-right: 5rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .menu-list {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav-content__logo {
+    margin-right: 0;
+  }
+  .nav-btn {
+    display: flex;
+    gap: 1rem;
+  }
+  .menu-list {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    height: 0;
+    overflow: hidden;
+    transition: all 200ms ease-in;
+  }
+  .menu-list--show {
+    height: 30rem;
+    overflow: visible;
+  }
+  .menu-list__item {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  .menu-list__item:last-child {
+    margin-bottom: 0;
+  }
+  .nav-toggle__icon {
+    display: flex;
+  }
+  .cover--show {
+    z-index: 99;
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 576px) {
+}
+@media screen and (max-width: 430px) {
+}
+@media screen and (max-width: 380px) {
+}
