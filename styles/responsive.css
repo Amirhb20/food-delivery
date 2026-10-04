@@ -8,11 +8,8 @@
   }
 }
 @media screen and (max-width: 1400px) {
-  .nav-content__logo {
-    margin-right: 6rem;
-  }
-  .nav-list__item {
-    margin-right: 5rem;
+  .food-card__photo::before {
+    width: 31rem;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -31,6 +28,15 @@
   .delivery {
     top: 0;
     right: 49rem;
+  }
+  .food-card__photo::before {
+    width: 25rem;
+  }
+  .food-content-title {
+    font-size: 1.8rem;
+  }
+  .food-content-caption {
+    font-size: 1.3rem;
   }
 }
 @media screen and (max-width: 992px) {
@@ -131,11 +137,20 @@
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 5rem;
   }
+  .food-card__photo::before {
+    width: 21rem;
+  }
+  .food-card {
+    height: 39rem;
+  }
 }
 @media screen and (max-width: 576px) {
   .delivery {
     top: -5rem;
     right: 11rem;
+  }
+  .food-card {
+    height: auto;
   }
 }
 @media screen and (max-width: 430px) {
