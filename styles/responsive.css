@@ -2,6 +2,10 @@
   .container {
     width: 1250px;
   }
+  .delivery {
+    top: 1rem;
+    right: 63rem;
+  }
 }
 @media screen and (max-width: 1400px) {
   .nav-content__logo {
@@ -18,10 +22,48 @@
   .nav-list__item {
     margin-right: 5rem;
   }
+  .homepage__title {
+    font-size: 3.8rem;
+  }
+  .homepage__caption {
+    max-width: 26rem;
+  }
+  .delivery {
+    top: 0;
+    right: 49rem;
+  }
 }
 @media screen and (max-width: 992px) {
   .menu-list {
     display: none;
+  }
+  .homepage {
+    margin-top: 5rem;
+  }
+  .delivery {
+    top: -1rem;
+    right: 37rem;
+  }
+  .delivery-recived__title {
+    font-size: 1.8rem;
+  }
+  .homepage__title {
+    font-size: 3rem;
+  }
+  .homepage__caption {
+    margin-bottom: 3rem;
+  }
+  .pricing-order {
+    gap: 2rem;
+  }
+  .pricing-order__numbers {
+    padding: 1rem 1rem;
+  }
+  .pricing-order__now {
+    padding: 1rem 1rem;
+  }
+  .pricing-order__now__title {
+    font-size: 1.5rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -66,10 +108,45 @@
     z-index: 99;
     opacity: 1;
   }
+  .homepage .row {
+    flex-direction: column-reverse;
+  }
+  .homepage {
+    margin-top: 8rem;
+  }
+  .homepage-content {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .homepage__caption {
+    max-width: none;
+    margin-bottom: 5rem;
+  }
+  .pricing-order {
+    justify-content: center;
+  }
+  .delivery {
+    top: -3rem;
+    right: 11rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 5rem;
+  }
 }
 @media screen and (max-width: 576px) {
+  .delivery {
+    top: -5rem;
+    right: 11rem;
+  }
 }
 @media screen and (max-width: 430px) {
+  .delivery {
+    top: -5rem;
+    right: 7rem;
+  }
 }
 @media screen and (max-width: 380px) {
+  .delivery {
+    top: -6rem;
+    right: 3rem;
+  }
 }
