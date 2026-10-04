@@ -343,3 +343,179 @@ input {
 .delivery-time {
   color: #7d7c7c;
 }
+/*
+---- Menu------
+*/
+.menu {
+  margin-top: 8rem;
+}
+.section-title {
+  font-family: "Poppins SemiBold";
+  font-size: 4rem;
+  color: var(--primaray-color);
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 5;
+}
+.section-title::before {
+  content: " ";
+  position: absolute;
+  width: 11.2rem;
+  height: 1rem;
+  background-color: #fff6a3;
+  bottom: 1.3rem;
+  z-index: -1;
+}
+.food-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+.food-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 1.2rem 2rem;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+.food-list__item--active {
+  background-color: var(--secendary--color);
+  font-family: "Poppins Medium";
+  -webkit-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.food-list__item--text {
+  margin-left: 1rem;
+  color: #504f4f;
+}
+.menu-food {
+  display: none;
+}
+.menu-food--show {
+  display: block;
+}
+.food-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border: 0.1rem solid #e3e3e3;
+  border-radius: 1rem;
+  position: relative;
+  min-height: 35rem;
+}
+.food-card__photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 1rem 0;
+  position: relative;
+  z-index: 5;
+}
+.food-card__img {
+}
+.food-card__photo::before {
+  content: " ";
+  position: absolute;
+  width: 34rem;
+  height: 10rem;
+  background-color: #fffde6;
+  bottom: -1.3rem;
+  z-index: -1;
+  border-radius: 1rem;
+}
+.food-content {
+  margin-left: 2rem;
+}
+.food-content-title {
+  font-family: "Poppins SemiBold";
+  font-size: 2rem;
+  color: var(--text--color);
+  margin-top: 1.5rem;
+}
+.food-content-caption {
+  font-size: 1.4rem;
+  color: #504f4f;
+  margin-bottom: 0.4rem;
+}
+.food-star {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+.food-star__text {
+}
+.food-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 1.5rem 2rem;
+}
+
+.food-price__text {
+  font-family: "Poppins SemiBold";
+  font-size: 2.4rem;
+  color: var(--text--color);
+}
+.food-price__icon {
+  background-color: var(--primaray-color);
+  padding: 0.6rem;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.food-sale {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+.menu-see_all {
+  text-decoration: underline;
+  text-align: center;
+  font-family: "Poppins Medium";
+  font-size: 2rem;
+  display: block;
+  color: #504f4f;
+  margin-top: 2rem;
+}
