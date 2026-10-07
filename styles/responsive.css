@@ -6,6 +6,9 @@
     top: 1rem;
     right: 63rem;
   }
+  .sale-box__img {
+    left: 23rem;
+  }
 }
 @media screen and (max-width: 1400px) {
   .food-card__photo::before {
@@ -37,6 +40,12 @@
   }
   .food-content-caption {
     font-size: 1.3rem;
+  }
+  .sale-box__title {
+    font-size: 2.8rem;
+  }
+  .sale-box__img {
+    left: 29rem;
   }
 }
 @media screen and (max-width: 992px) {
@@ -70,6 +79,9 @@
   }
   .pricing-order__now__title {
     font-size: 1.5rem;
+  }
+  .sale-box__img {
+    left: 17rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -143,6 +155,9 @@
   .food-card {
     height: 39rem;
   }
+  .sale-box__img {
+    left: 28rem;
+  }
 }
 @media screen and (max-width: 576px) {
   .delivery {
@@ -152,16 +167,28 @@
   .food-card {
     height: auto;
   }
+  .sale-box__img {
+    left: 26rem;
+  }
 }
 @media screen and (max-width: 430px) {
   .delivery {
     top: -5rem;
     right: 7rem;
   }
+  .sale-box__img {
+    left: 22rem;
+  }
+  .sale-box__title {
+    font-size: 2.5rem;
+  }
 }
 @media screen and (max-width: 380px) {
   .delivery {
     top: -6rem;
     right: 3rem;
+  }
+  .sale-box__img {
+    left: 15rem;
   }
 }
