@@ -519,3 +519,166 @@ input {
   color: #504f4f;
   margin-top: 2rem;
 }
+/*
+---- Sale off------
+*/
+.sale-off {
+  margin-top: 8rem;
+}
+.section-head {
+  font-family: "Poppins SemiBold";
+  font-size: 4rem;
+  color: var(--primaray-color);
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 5;
+  text-align: center;
+}
+.section-head::before {
+  content: " ";
+  position: absolute;
+  width: 17rem;
+  height: 1rem;
+  background-color: #fff6a3;
+  bottom: 1.3rem;
+  z-index: -1;
+}
+.sale-box {
+  background-color: #f1f1f1;
+  border: 0.1rem solid #e3e3e3;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 28rem;
+  -webkit-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.sale-box__content {
+  padding: 3rem 0 1.5rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+}
+.sale-box__head {
+  color: var(--text--color);
+  position: relative;
+}
+
+.sale-box__head::after {
+  content: " ";
+  position: absolute;
+  width: 27rem;
+  height: 0.1rem;
+  background-color: rgba(125, 124, 124, 20%);
+  top: 0;
+  bottom: 0;
+  left: 8rem;
+  margin: auto;
+}
+.sale-box__title {
+  font-family: "Poppins SemiBold";
+  font-size: 3rem;
+  color: var(--primaray-color);
+  text-transform: uppercase;
+}
+.sale-box__caption {
+  color: #504f4f;
+  max-width: 16rem;
+  margin-bottom: 0.5rem;
+}
+.sale-box__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+.sale-box__price--offer {
+  color: #7d7c7c;
+  font-family: "Poppins SemiBold";
+  text-decoration: line-through;
+}
+.sale-box__price--now {
+  color: var(--primaray-color);
+  font-family: "Poppins SemiBold";
+  font-size: 2.4rem;
+}
+.sale-box__order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+  background-color: #504f4f;
+  width: 14rem;
+  padding: 0.6rem 1rem;
+  border-radius: 5rem;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.sale-box__order--now {
+  font-family: "Poppins Medium";
+}
+.sale-box__img {
+  position: absolute;
+  top: 0;
+  bottom: -2rem;
+  margin: auto;
+  left: 22rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.sale-box__img--size {
+  width: 20rem;
+  height: 15rem;
+  left: 24rem;
+  top: 3rem;
+}
+.sale-box:hover {
+  background-color: #d62822;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.sale-box:hover .sale-box__head {
+  color: #ffeae6;
+}
+.sale-box:hover .sale-box__head::after {
+  background-color: #f1f1f1;
+}
+.sale-box:hover .sale-box__title {
+  color: var(--secendary--color);
+}
+.sale-box:hover .sale-box__caption {
+  color: #ffeae6;
+}
+.sale-box:hover .sale-box__price--offer {
+  color: #f1f1f1;
+}
+.sale-box:hover .sale-box__price--now {
+  color: var(--secendary--color);
+}
+.sale-box:hover .sale-box__order {
+  background-color: #fffde6;
+  color: var(--text--color);
+}
+.sale-box:hover .sale-box__order svg path {
+  fill: var(--text--color);
+}
