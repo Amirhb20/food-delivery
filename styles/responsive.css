@@ -14,6 +14,9 @@
   .food-card__photo::before {
     width: 31rem;
   }
+  .news__title {
+    font-size: 4rem;
+  }
 }
 @media screen and (max-width: 1200px) {
   .nav-content__logo {
@@ -46,6 +49,21 @@
   }
   .sale-box__img {
     left: 29rem;
+  }
+  .news__wrapper {
+    flex-direction: column-reverse;
+  }
+  .news {
+    max-width: 105rem;
+  }
+  .news__wrapper {
+    padding-left: 0rem;
+  }
+  .news__logo {
+    margin-bottom: 12rem;
+  }
+  .news__content {
+    padding: 8rem 17rem 0 0;
   }
 }
 @media screen and (max-width: 992px) {
@@ -158,6 +176,39 @@
   .sale-box__img {
     left: 28rem;
   }
+  .news {
+    border-top-right-radius: 500rem;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 500rem;
+  }
+  .news__content {
+    padding: 8rem 0 0 0;
+    text-align: center;
+  }
+  .news__logo {
+    justify-content: center;
+  }
+  .news__title {
+    font-size: 3.2rem;
+  }
+  .news__description {
+    margin-bottom: 9rem;
+  }
+  .news__photo {
+    width: 100%;
+  }
+  .news__img {
+    transform: translateY(0);
+    position: absolute;
+    bottom: -1.4rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 100%;
+  }
+  .news__logo {
+    margin-bottom: 18rem;
+  }
 }
 @media screen and (max-width: 576px) {
   .delivery {
@@ -169,6 +220,18 @@
   }
   .sale-box__img {
     left: 26rem;
+  }
+  .news__haed {
+    font-size: 1.8rem;
+  }
+  .news__title {
+    font-size: 3rem;
+  }
+  .news__description {
+    padding: 0 1.5rem 0 1.5rem;
+  }
+  .news__logo {
+    margin-bottom: 15rem;
   }
 }
 @media screen and (max-width: 430px) {
@@ -182,6 +245,18 @@
   .sale-box__title {
     font-size: 2.5rem;
   }
+  .news__description {
+    margin-bottom: 8rem;
+  }
+  .news__title {
+    font-size: 2.6rem;
+  }
+  .news__logo {
+    margin-bottom: 2rem;
+  }
+  .news__description {
+    padding: 0;
+  }
 }
 @media screen and (max-width: 380px) {
   .delivery {
@@ -190,5 +265,11 @@
   }
   .sale-box__img {
     left: 15rem;
+  }
+  .news__description {
+    margin-bottom: 6rem;
+  }
+  .news__logo {
+    margin-bottom: 0rem;
   }
 }
