@@ -749,3 +749,101 @@ input {
   flex-wrap: wrap;
   gap: 2rem;
 }
+/*
+---- Location------
+*/
+.contact {
+  margin: 10rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.contact-content {
+  background-color: var(--text--color);
+  border-radius: 2rem;
+  padding: 12rem 0;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.contact-content__title {
+  color: #fffde6;
+  font-family: "Poppins Medium";
+  font-size: 4.8rem;
+}
+.contact-content__caption {
+  color: #f1f1f1;
+  margin-bottom: 2rem;
+}
+.contact-box {
+  width: 50rem;
+  margin: 0 auto;
+  background-color: var(--secendary--color);
+  border-radius: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0.8rem 0.5rem 0.8rem 1.5rem;
+}
+.contact-box__input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.contact-box__input::-webkit-input-placeholder {
+  color: #504f4f;
+  font-family: "Poppins";
+}
+.contact-box__input::-moz-placeholder {
+  color: #504f4f;
+  font-family: "Poppins";
+}
+.contact-box__input:-ms-input-placeholder {
+  color: #504f4f;
+  font-family: "Poppins";
+}
+.contact-box__input::-ms-input-placeholder {
+  color: #504f4f;
+  font-family: "Poppins";
+}
+.contact-box__input::placeholder {
+  color: #504f4f;
+  font-family: "Poppins";
+}
+.contact-box__buttom {
+  border: none;
+  outline: none;
+  background-color: #ffeae6;
+  font-family: "Poppins Medium";
+  border-radius: 5rem;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+}
+.contact__photo {
+}
+.contact__img--salad {
+  position: absolute;
+  opacity: 0.5;
+  top: -6rem;
+  right: 1rem;
+}
+.contact__img--burger {
+  position: absolute;
+  opacity: 0.5;
+  bottom: -5rem;
+  left: 11rem;
+}
