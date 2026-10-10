@@ -77,6 +77,9 @@
   .contact__img--burger {
     left: 1rem;
   }
+  .footer__content {
+    padding: 5rem 0;
+  }
 }
 @media screen and (max-width: 992px) {
   .menu-list {
@@ -124,6 +127,17 @@
   }
   .contact__img--burger {
     bottom: -6.5rem;
+  }
+  .footer__content {
+    flex-direction: column-reverse;
+  }
+  .footer-content-left {
+    align-items: center;
+    margin-top: 3rem;
+  }
+
+  .footer-content-right {
+    justify-content: center;
   }
 }
 @media screen and (max-width: 768px) {
@@ -243,6 +257,9 @@
   .contact__img--burger {
     bottom: -7.5rem;
   }
+  .footer-content-right {
+    gap: 13rem;
+  }
 }
 @media screen and (max-width: 576px) {
   .delivery {
@@ -270,7 +287,14 @@
   .contact-box {
     width: 35rem;
   }
+  .footer-content-right {
+    gap: 6rem;
+  }
+  .footer-about__text {
+    font-size: 3rem;
+  }
 }
+
 @media screen and (max-width: 430px) {
   .delivery {
     top: -5rem;
@@ -306,6 +330,15 @@
   }
   .contact-box {
     width: 27rem;
+  }
+  .footer-content-right {
+    gap: 4rem;
+  }
+  .footer-link__text {
+    font-size: 1.8rem;
+  }
+  .footer-times__text {
+    font-size: 1.8rem;
   }
 }
 @media screen and (max-width: 380px) {
