@@ -23,6 +23,14 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
 }
+::-moz-selection {
+  background: var(--primaray-color);
+  color: #fffde6;
+}
+::selection {
+  background: var(--primaray-color);
+  color: #fffde6;
+}
 
 /* reset */
 a {
