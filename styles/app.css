@@ -31,6 +31,35 @@ body {
   background: var(--primaray-color);
   color: #fffde6;
 }
+.progress {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  border-radius: 2rem;
+  right: 0;
+  height: 0.4rem;
+  background-color: var(--primaray-color);
+  width: 100%;
+  -webkit-animation: scroll-animation 1s linear;
+  animation: scroll-animation 1s linear;
+  animation-timeline: scroll(root y);
+}
+@-webkit-keyframes scroll-animation {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes scroll-animation {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
+}
 
 /* reset */
 a {
