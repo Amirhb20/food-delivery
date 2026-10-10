@@ -1,0 +1,162 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f7f7;
+}
+.wrapper {
+  display: flex;
+}
+/* 
+
+page title 
+
+*/
+.page-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.2rem;
+  margin-bottom: 4rem;
+}
+.page-title__img {
+  width: 6rem;
+  height: 6rem;
+}
+.page-title__text {
+  font-family: "Poppins SemiBold";
+  font-size: 4rem;
+  color: var(--primaray-color);
+  text-shadow: 0 0 1rem rgba(0, 0, 0, 15%);
+}
+/*
+ form 
+ */
+.form {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30rem;
+  height: 40rem;
+  margin: 0 auto;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 10%);
+}
+.form-section {
+  border: 0.1rem solid rgba(0, 0, 0, 40%);
+  border-radius: 2rem;
+  margin: 0 1rem 2rem 1rem;
+  padding: 1.2rem 2rem;
+}
+.form-section::placeholder {
+  font-family: "Poppins Medium";
+  font-size: 1.5rem;
+}
+.form-section:focus {
+  border-color: rgba(0, 0, 0, 100%);
+  transition: all 100ms ease-in;
+}
+.terms {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 1rem;
+}
+.terms input {
+  accent-color: #2196f3;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+.form-button {
+  background-color: transparent;
+  border: 0.1rem solid var(--primaray-color);
+  color: var(--primaray-color);
+  border-radius: 2rem;
+  padding: 0.9rem 2rem;
+  font-family: "Poppins Medium";
+  font-size: 1.5rem;
+  margin: 2rem 0.5rem 0 0.5rem;
+}
+.form-button:hover {
+  background-color: var(--primaray-color);
+  color: #fff;
+  transition: all 100ms ease-in;
+}
+.swich-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+/*
+  signup form 
+  */
+
+.from-one {
+  width: 30rem;
+  height: 40rem;
+}
+
+.form__title {
+  font-family: "Poppins SemiBold";
+  font-size: 3rem;
+  color: #ffbf00;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 5;
+  text-align: center;
+}
+
+/*
+
+ login form 
+
+ */
+.form-two {
+  width: 30rem;
+  height: 30rem;
+}
+.form-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  gap: 0.3rem;
+}
+.form__title--text {
+  font-family: "Poppins SemiBold";
+  font-size: 3rem;
+  color: #ffbf00;
+}
+.form__title--img {
+  width: 4rem;
+  height: 3rem;
+}
+/*
+
+ Animation form 
+
+ */
+.auth-form {
+  transition: all 0.4s ease-in-out;
+  animation: fadeInUp 0.4s ease-out;
+}
+#signup-form,
+#login-form {
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
