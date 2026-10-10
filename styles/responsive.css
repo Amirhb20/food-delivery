@@ -260,7 +260,11 @@
   .footer-content-right {
     gap: 13rem;
   }
+  .pricing-order__now {
+    padding: 1.4rem 2rem;
+  }
 }
+
 @media screen and (max-width: 576px) {
   .delivery {
     top: -5rem;
@@ -294,7 +298,6 @@
     font-size: 3rem;
   }
 }
-
 @media screen and (max-width: 430px) {
   .delivery {
     top: -5rem;

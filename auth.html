@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>account</title>
+    <link rel="stylesheet" href="./styles/app.css" />
+    <link rel="icon" type="image/png" href="./images/logo-site.png" />
+    <link rel="stylesheet" href="./styles/auth.css" />
+  </head>
+  <body>
+    <div class="wrappper">
+      <div class="page-title">
+        <img
+          src="./images/logo-header.png"
+          class="page-title__img"
+          alt="logo header"
+        />
+        <h1 class="page-title__text">food delivery</h1>
+      </div>
+      <div id="signup-form" class="auth-form">
+        <form action="index.html" class="form form-one">
+          <h2 class="form__title">Welcome</h2>
+          <input
+            type="text"
+            class="form-section"
+            placeholder="Username"
+            required
+          />
+          <input
+            type="email"
+            class="form-section"
+            placeholder="Email"
+            required
+          />
+          <input
+            type="password"
+            class="form-section"
+            placeholder="Password"
+            required
+          />
+          <div class="terms">
+            <input type="checkbox" id="terms" required />
+            <label for="terms"
+              ><a href="#" target="_blank">I agree to the</a>Terms site</label
+            >
+          </div>
+          <button type="submit" class="form-button">Register</button>
+        </form>
+        <div class="swich-form">
+          <p>Already have an account?</p>
+          <a href="#" onclick="showForm('login')">login</a>
+        </div>
+      </div>
+      <div id="login-form" class="auth-form" style="display: none">
+        <form action="index.html" class="form form-two">
+          <div class="form-head">
+            <h2 class="form__title--text">Hi ,</h2>
+            <img
+              src="./images/burger-menu.png"
+              class="form__title--img"
+              alt=""
+            />
+          </div>
+          <input
+            type="text"
+            class="form-section"
+            placeholder="Username or Email"
+            required
+          />
+          <input
+            type="password"
+            class="form-section"
+            placeholder="Password"
+            required
+          />
+          <button type="submit" class="form-button">Login</button>
+        </form>
+        <div class="swich-form">
+          <p>Don't have an account?</p>
+          <a href="#" onclick="showForm('signup')">sign up</a>
+        </div>
+      </div>
+    </div>
+    <script src="./scripts/auth.js"></script>
+  </body>
+</html>
