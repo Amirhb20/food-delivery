@@ -160,3 +160,30 @@ page title
     transform: translateY(0);
   }
 }
+
+/* Responsive styles for the authentication page */
+
+@media screen and (max-width: 992px) {
+  .page-title__text {
+    font-size: 4rem;
+  }
+  .page-title__img {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .page-title__text {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  .page-title__text {
+    font-size: 3rem;
+  }
+  .page-title__img {
+    width: 5rem;
+    height: 5rem;
+  }
+}
