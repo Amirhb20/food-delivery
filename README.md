@@ -77,6 +77,18 @@ Screenshots and a live demo link can be added here when they are available.
 
 The original source code for this project is licensed under the MIT License. Third-party assets, including images, graphics, and fonts, remain subject to their respective licenses and are not automatically covered by the project's MIT License.
 
+## Contributing
+
+Contributions to Mr. Donald Food Delivery are welcome!
+
+You can contribute by fixing bugs, improving accessibility, adding new features, or enhancing the existing user experience.
+
+Before starting work, please check the open Issues to find tasks that need help. If you have a new idea or find a bug, open an Issue before making significant changes.
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on setting up your work, creating a branch, and submitting a Pull Request.
+
+All contributions are subject to review before being merged into the main project.
+
 ## Author
 
 **Amir Hosein Bolori**  
