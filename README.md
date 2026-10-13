@@ -68,6 +68,15 @@ The current static front-end version does not require a build step or package in
 
 Screenshots and a live demo link can be added here when they are available.
 
+## Assets & Credits
+
+- **Design and Images:** The design and image assets were sourced from a Figma design file. Please refer to the original resource and its license before reusing these assets.
+- **Fonts:** Fonts were downloaded from [Google Fonts](https://fonts.google.com/). Each font is subject to its respective license.
+
+## License
+
+The original source code for this project is licensed under the MIT License. Third-party assets, including images, graphics, and fonts, remain subject to their respective licenses and are not automatically covered by the project's MIT License.
+
 ## Author
 
 **Amir Hosein Bolori**  
