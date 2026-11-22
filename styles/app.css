@@ -556,6 +556,87 @@ input {
   color: #504f4f;
   margin-top: 2rem;
 }
+/* ---- Menu Search ---- */
+.menu-search {
+  margin-bottom: 3rem;
+}
+.menu-search__label {
+  display: block;
+  font-family: "Poppins Medium";
+  font-size: 1.4rem;
+  color: #7d7c7c;
+  margin-bottom: 0.8rem;
+  /* visually visible label — satisfies accessibility requirement */
+}
+.menu-search__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  border-radius: 5rem;
+  padding: 1rem 2rem;
+  gap: 1rem;
+  max-width: 50rem;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -o-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+.menu-search__wrapper:focus-within {
+  -webkit-box-shadow: 0 0 0 0.2rem var(--secendary--color);
+  box-shadow: 0 0 0 0.2rem var(--secendary--color);
+}
+.menu-search__icon {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.menu-search__input {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background-color: transparent;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  color: var(--text--color);
+  min-width: 0;
+}
+.menu-search__input::-webkit-input-placeholder {
+  color: #7d7c7c;
+  font-family: "Poppins";
+}
+.menu-search__input::-moz-placeholder {
+  color: #7d7c7c;
+  font-family: "Poppins";
+}
+.menu-search__input:-ms-input-placeholder {
+  color: #7d7c7c;
+  font-family: "Poppins";
+}
+.menu-search__input::-ms-input-placeholder {
+  color: #7d7c7c;
+  font-family: "Poppins";
+}
+.menu-search__input::placeholder {
+  color: #7d7c7c;
+  font-family: "Poppins";
+}
+/* Remove the native X button that browsers add to type="search" */
+.menu-search__input::-webkit-search-decoration,
+.menu-search__input::-webkit-search-cancel-button,
+.menu-search__input::-webkit-search-results-button,
+.menu-search__input::-webkit-search-results-decoration {
+  display: none;
+}
+/* ---- No-results message ---- */
+.menu-no-results {
+  text-align: center;
+  font-family: "Poppins Medium";
+  font-size: 1.8rem;
+  color: #7d7c7c;
+  padding: 4rem 0;
+}
 /*
 ---- Sale off------
 */

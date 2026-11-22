@@ -42,6 +42,9 @@ foodListItems.forEach((foodListItem) => {
     foodListItem.classList.add("food-list__item--active");
     let contentId = foodListItem.getAttribute("data-content-id");
     document.querySelector(contentId).classList.add("menu-food--show");
+
+    // Re-apply the current search query to the newly visible panel
+    applyMenuSearch();
   });
 });
 menuListItems.forEach((menuListItem) => {
@@ -83,3 +86,61 @@ function observerHandler(allSections) {
 sections.forEach((section) => {
   observer.observe(section);
 });
+
+// ---- Menu search ----
+
+const menuSearchInput = document.getElementById("menu-search-input");
+const menuNoResults = document.getElementById("menu-no-results");
+
+/**
+ * Filter the cards inside the currently active .menu-food panel by the
+ * search query. Cards whose title does not contain the query (case-insensitive,
+ * trimmed) are hidden. The no-results message is shown when no cards match.
+ *
+ * Integrates with the existing category filter: the active panel is determined
+ * by the .menu-food--show class, so switching categories and then searching
+ * (or vice versa) always work together.
+ */
+function applyMenuSearch() {
+  var query = menuSearchInput.value.trim().toLowerCase();
+
+  // Find the currently visible category panel
+  var activePanel = document.querySelector(".menu-food--show");
+  if (!activePanel) {
+    return;
+  }
+
+  // Each direct card wrapper is a column div (col-12 col-sm-6 …)
+  var cardColumns = activePanel.querySelectorAll(".food-card");
+  var visibleCount = 0;
+
+  cardColumns.forEach(function (card) {
+    var titleEl = card.querySelector(".food-content-title");
+    // Guard: if a card has no title element, keep it visible
+    if (!titleEl) {
+      card.parentElement.style.display = "";
+      visibleCount++;
+      return;
+    }
+
+    // textContent trims any invisible Unicode characters (e.g. the ZWNBSP
+    // present in some titles in the HTML) by collapsing whitespace.
+    var titleText = titleEl.textContent.replace(/\s+/g, " ").trim().toLowerCase();
+    var matches = query === "" || titleText.includes(query);
+
+    // Show/hide the column wrapper that contains this card
+    card.parentElement.style.display = matches ? "" : "none";
+    if (matches) {
+      visibleCount++;
+    }
+  });
+
+  // Show the no-results message only when a non-empty query yields no matches
+  if (query !== "" && visibleCount === 0) {
+    menuNoResults.removeAttribute("hidden");
+  } else {
+    menuNoResults.setAttribute("hidden", "");
+  }
+}
+
+menuSearchInput.addEventListener("input", applyMenuSearch);

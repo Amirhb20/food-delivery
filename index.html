@@ -179,6 +179,21 @@
       <section class="menu" id="menu">
         <div class="container">
           <h2 class="section-title">Menu</h2>
+          <div class="menu-search">
+            <label for="menu-search-input" class="menu-search__label">Search menu</label>
+            <div class="menu-search__wrapper">
+              <svg class="menu-search__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11 4a7 7 0 1 0 0 14A7 7 0 0 0 11 4Zm-9 7a9 9 0 1 1 16.32 5.906l3.387 3.387a1 1 0 0 1-1.414 1.414l-3.387-3.387A9 9 0 0 1 2 11Z" fill="#7d7c7c"/>
+              </svg>
+              <input
+                type="search"
+                id="menu-search-input"
+                class="menu-search__input"
+                placeholder="Search food and drinks..."
+                autocomplete="off"
+              />
+            </div>
+          </div>
           <ul class="food-list">
             <li
               class="food-list__item food-list__item--active"
@@ -1547,6 +1562,15 @@
               </div>
             </div>
           </div>
+          <p
+            id="menu-no-results"
+            class="menu-no-results"
+            aria-live="polite"
+            role="status"
+            hidden
+          >
+            No menu items found. Try another search.
+          </p>
           <a href="#" class="menu-see_all">See all</a>
         </div>
       </section>

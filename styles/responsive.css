@@ -297,6 +297,9 @@
   .footer-about__text {
     font-size: 3rem;
   }
+  .menu-search__wrapper {
+    max-width: 100%;
+  }
 }
 @media screen and (max-width: 430px) {
   .delivery {
