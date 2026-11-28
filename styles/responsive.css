@@ -102,11 +102,16 @@
     margin-top: 1rem;
     height: 0;
     overflow: hidden;
+    /* keeps the links of a closed menu out of the keyboard tab order */
+    visibility: hidden;
     transition: all 200ms ease-in;
   }
   .menu-list--show {
     height: 30rem;
     overflow: visible;
+    visibility: visible;
+    /* visibility is not transitioned on open, so links can be focused at once */
+    transition: height 200ms ease-in;
   }
   .menu-list__item {
     margin-right: 0;

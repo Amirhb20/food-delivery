@@ -22,7 +22,7 @@
                 alt="header Logo"
               />
             </div>
-            <ul class="menu-list">
+            <ul class="menu-list" id="main-menu">
               <li data-section="homepage" class="menu-list__item  menu-list__item--active">
                 <a
                   href="#"
@@ -48,9 +48,15 @@
             <a href="auth.html?form=signup" class="nav-btn__link nav-btn__link--sign">Sign in</a>
             <a href="auth.html?form=login" class="nav-btn__link nav-btn__link--log">Log in</a>
           </div>
-          <div class="nav-toggle__icon">
-            <div class="nav-toggle__line"></div>
-          </div>
+          <button
+            type="button"
+            class="nav-toggle__icon"
+            aria-label="Toggle navigation menu"
+            aria-controls="main-menu"
+            aria-expanded="false"
+          >
+            <span class="nav-toggle__line"></span>
+          </button>
         </nav>
       </div>
     </header>

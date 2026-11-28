@@ -169,6 +169,9 @@ input {
 .nav-toggle__icon {
   display: none;
   cursor: pointer;
+  padding: 0;
+  border: none;
+  background: transparent;
   width: 4.5rem;
   height: 4.5rem;
   -webkit-box-align: center;
@@ -197,6 +200,7 @@ input {
 .nav-toggle__line::after {
   position: absolute;
   top: 1.2rem;
+  left: 0;
   -webkit-transition: all 150ms ease-in;
   -o-transition: all 150ms ease-in;
   transition: all 150ms ease-in;
@@ -204,6 +208,7 @@ input {
 .nav-toggle__line::before {
   position: absolute;
   top: -1.2rem;
+  left: 0;
   -webkit-transition: all 150ms ease-in;
   -o-transition: all 150ms ease-in;
   transition: all 150ms ease-in;

@@ -10,10 +10,46 @@ const foodListItems = document.querySelectorAll(".food-list__item");
 const menuListItems = document.querySelectorAll(".menu-list__item");
 const sections = document.querySelectorAll("main > section");
 //open & close mobile menu
-navToggleIcon.addEventListener("click", function () {
-  this.classList.toggle("nav__toggle-icon--open");
-  menu.classList.toggle("menu-list--show");
-  cover.classList.toggle("cover--show");
+const nav = document.querySelector(".nav");
+
+function isMenuOpen() {
+  return menu.classList.contains("menu-list--show");
+}
+
+function setMenuOpen(isOpen) {
+  // Don't leave keyboard focus inside a menu that is about to be hidden
+  if (!isOpen && isMenuOpen() && menu.contains(document.activeElement)) {
+    navToggleIcon.focus({ preventScroll: true });
+  }
+  navToggleIcon.classList.toggle("nav__toggle-icon--open", isOpen);
+  navToggleIcon.setAttribute("aria-expanded", isOpen);
+  menu.classList.toggle("menu-list--show", isOpen);
+  cover.classList.toggle("cover--show", isOpen);
+}
+
+navToggleIcon.addEventListener("click", (e) => {
+  setMenuOpen(!isMenuOpen());
+  // The menu comes before the button in the page, so a keyboard user
+  // (click without a pointer) is moved to its first link
+  if (isMenuOpen() && e.detail === 0) {
+    menu.querySelector("a").focus();
+  }
+});
+
+cover.addEventListener("click", () => setMenuOpen(false));
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && isMenuOpen()) {
+    setMenuOpen(false);
+    navToggleIcon.focus({ preventScroll: true });
+  }
+});
+
+// Close the menu when keyboard focus moves out of the header navigation
+nav.addEventListener("focusout", (e) => {
+  if (e.relatedTarget && !nav.contains(e.relatedTarget)) {
+    setMenuOpen(false);
+  }
 });
 
 // Handle order quantity increase and decrease
@@ -49,19 +85,35 @@ foodListItems.forEach((foodListItem) => {
 });
 // Scroll to a section when its menu item is clicked
 const scrollOffset = 150; // space left above a section for the fixed header
+// Section chosen from the menu, until the user scrolls or acts again
+let clickedSection = null;
 
 menuListItems.forEach((menuListItem) => {
   menuListItem.addEventListener("click", function (e) {
     e.preventDefault();
 
     let sectionId = menuListItem.getAttribute("data-section");
-    let sectionOffserTop = document.querySelector(`.${sectionId}`).offsetTop;
+    let section = document.querySelector(`.${sectionId}`);
+    clickedSection = section;
+    setMenuOpen(false);
 
     window.scrollTo({
-      top: sectionOffserTop - scrollOffset,
+      top: section.offsetTop - scrollOffset,
       behavior: "smooth",
     });
+    // No scroll event fires if the page can't scroll any further
+    updateActiveMenuItem();
   });
+});
+
+["wheel", "touchstart", "mousedown", "keydown"].forEach((eventName) => {
+  window.addEventListener(
+    eventName,
+    () => {
+      clickedSection = null;
+    },
+    { passive: true },
+  );
 });
 
 // Highlight the menu item of the section being viewed (always exactly one)
@@ -76,10 +128,11 @@ function updateActiveMenuItem() {
     }
   });
 
-  // At the end of the page the last section may never reach the line
+  // At the end of the page some sections may never reach the line: show the
+  // one chosen from the menu, otherwise the last one
   const pageBottom = document.documentElement.scrollHeight - 2;
   if (window.scrollY + window.innerHeight >= pageBottom) {
-    currentSection = sections[sections.length - 1];
+    currentSection = clickedSection || sections[sections.length - 1];
   }
 
   menuListItems.forEach((menuListItem) => {
