@@ -47,45 +47,55 @@ foodListItems.forEach((foodListItem) => {
     applyMenuSearch();
   });
 });
+// Scroll to a section when its menu item is clicked
+const scrollOffset = 150; // space left above a section for the fixed header
+
 menuListItems.forEach((menuListItem) => {
   menuListItem.addEventListener("click", function (e) {
     e.preventDefault();
-    document
-      .querySelector(".menu-list__item--active")
-      .classList.remove("menu-list__item--active");
-    menuListItem.classList.add("menu-list__item--active");
 
     let sectionId = menuListItem.getAttribute("data-section");
     let sectionOffserTop = document.querySelector(`.${sectionId}`).offsetTop;
 
     window.scrollTo({
-      top: sectionOffserTop - 150,
+      top: sectionOffserTop - scrollOffset,
       behavior: "smooth",
     });
   });
 });
 
-const observer = new IntersectionObserver(observerHandler, {
-  threshold: 0.5,
-});
+// Highlight the menu item of the section being viewed (always exactly one)
+function updateActiveMenuItem() {
+  // The current section is the last one whose top has passed this line
+  const activationLine = Math.max(scrollOffset + 10, window.innerHeight * 0.35);
+  let currentSection = sections[0];
 
-function observerHandler(allSections) {
-  allSections.map((section) => {
-    let sectionClassName = section.target.className;
-    let sectionMenuItem = document.querySelector(
-      `.menu-list__item[data-section=${sectionClassName}]`,
-    );
-    if (section.isIntersecting) {
-      sectionMenuItem.classList.add("menu-list__item--active");
-    } else {
-      sectionMenuItem.classList.remove("menu-list__item--active");
+  sections.forEach((section) => {
+    if (section.getBoundingClientRect().top <= activationLine) {
+      currentSection = section;
     }
+  });
+
+  // At the end of the page the last section may never reach the line
+  const pageBottom = document.documentElement.scrollHeight - 2;
+  if (window.scrollY + window.innerHeight >= pageBottom) {
+    currentSection = sections[sections.length - 1];
+  }
+
+  menuListItems.forEach((menuListItem) => {
+    menuListItem.classList.toggle(
+      "menu-list__item--active",
+      currentSection.classList.contains(menuListItem.dataset.section),
+    );
   });
 }
 
-sections.forEach((section) => {
-  observer.observe(section);
-});
+window.addEventListener("scroll", updateActiveMenuItem, { passive: true });
+window.addEventListener("resize", updateActiveMenuItem);
+// Filtering and searching change the page height without a scroll event
+new ResizeObserver(updateActiveMenuItem).observe(
+  document.querySelector("main"),
+);
 
 // ---- Menu search ----
 
@@ -125,7 +135,10 @@ function applyMenuSearch() {
 
     // textContent trims any invisible Unicode characters (e.g. the ZWNBSP
     // present in some titles in the HTML) by collapsing whitespace.
-    var titleText = titleEl.textContent.replace(/\s+/g, " ").trim().toLowerCase();
+    var titleText = titleEl.textContent
+      .replace(/\s+/g, " ")
+      .trim()
+      .toLowerCase();
     var matches = query === "" || titleText.includes(query);
 
     // Show/hide the column wrapper that contains this card
